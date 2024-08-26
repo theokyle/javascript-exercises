@@ -1,11 +1,5 @@
-const removeFromArray = function(array, number) {
-    let newArray = [];
-    for (i=0; i<array.length; i++) {
-        if (array[i] != number) {
-           newArray.push(array[i]);
-        }
-    }
-return newArray;
+const removeFromArray = function(array, ...args) {
+    return array.filter(x => !args.includes(x))
 };
 
 // Do not edit below this line
